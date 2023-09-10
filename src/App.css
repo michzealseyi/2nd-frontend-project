@@ -27,10 +27,8 @@
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
   --radius: 0.5rem;
-  --light-shadow: 0 5px 15px
-    rgba(0, 0, 0, 0.2);
-  --dark-shadow: 0 5px 15px
-    rgba(0, 0, 0, 0.4);
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
 /* 
@@ -43,6 +41,10 @@ GLOBAL
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .body {
@@ -126,8 +128,7 @@ p {
   font-size: 0.875rem;
   border: 2px solid transparent;
   cursor: pointer;
-  box-shadow: 0 1px 3px
-    rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 .btn:hover {
   color: var(--clr-pry-1);
@@ -265,9 +266,7 @@ NAVBAR
   .nav-icon {
     margin-right: 0.7rem;
     fill: var(--clr-pry-5);
-    -webkit-transition: var(
-      --transition
-    );
+    -webkit-transition: var(--transition);
     transition: var(--transition);
   }
   .nav-icon:hover {
@@ -322,14 +321,9 @@ HERO
         from(rgba(44, 174, 186, 0.7)),
         to(rgba(0, 0, 0, 0.7))
       ),
-      url("./ImgSvg/main.jpeg")
-        center/cover no-repeat;
-    background: linear-gradient(
-        rgba(44, 174, 186, 0.7),
-        rgba(0, 0, 0, 0.7)
-      ),
-      url("./ImgSvg/main.jpeg")
-        center/cover no-repeat;
+      url("./ImgSvg/main.jpeg") center/cover no-repeat;
+    background: linear-gradient(rgba(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)),
+      url("./ImgSvg/main.jpeg") center/cover no-repeat;
   }
   .hero-banner {
     padding: 0;
@@ -369,8 +363,7 @@ ABOUT
   .about-img::before {
     content: "";
     position: absolute;
-    border: 0.5rem solid
-      var(--clr-pry-5);
+    border: 0.5rem solid var(--clr-pry-5);
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -551,7 +544,7 @@ CONTACT
   color: var(--clr-white);
 }
 .contact-title p {
-  color: var(--clr-pry-8);
+  color: var(--clr-pry-10);
 }
 .contact-form {
   display: -webkit-box;
@@ -631,10 +624,7 @@ GALLERY
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(
-    -50%,
-    -50%
-  );
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   fill: var(--clr-white);
   opacity: 0;
@@ -649,12 +639,10 @@ GALLERY
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
-.gallery-img-container:hover
-  .gallery-img {
+.gallery-img-container:hover .gallery-img {
   opacity: 0.5;
 }
-.gallery-img-container:hover
-  .gallery-icon {
+.gallery-img-container:hover .gallery-icon {
   opacity: 1;
 }
 @media screen and (min-width: 768px) {
